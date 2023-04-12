@@ -4,17 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Events extends Model
+class Event extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
+
     protected $table = 'events';
     public $timestamps = true;
     protected $fillable = [
-        "title",
-        "image",
-        "date_event",
-        "adress",
-        "description"
+        'title',
+        'image',
+        'date_event',
+        'adress',
+        'description'
     ];
 }
