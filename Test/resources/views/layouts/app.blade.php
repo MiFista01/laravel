@@ -122,7 +122,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 ">
             <div class="dashboard_graph x_panel">
-              <div class="col-md-6">
+              <div class="col-md-6">Welcome
                 <h3>Admin panel</h3>
               </div>
             </div>

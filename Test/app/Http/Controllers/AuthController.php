@@ -21,7 +21,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect('dashboard');
         }
-        return redirect('login')->with('error', 'Босяк, шляпа вышла');
+        return redirect('login')->with('error', 'Не судьба с такими данными');
     }
     public function logout() {
         Auth::logout();

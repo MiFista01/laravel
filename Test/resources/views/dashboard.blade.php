@@ -8,7 +8,7 @@
 
 <div class="x_content">
     <div class="demo-container" style="height: 250px;">
-        <h4>Wlcome Admin panel</h4>
+        <h4>Welcome Admin panel</h4>
         <div>
             @can('isAdmin')
             <div class="btn btn-success btn-lg">
