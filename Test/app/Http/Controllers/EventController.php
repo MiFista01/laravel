@@ -53,7 +53,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        
     }
 
     /**
@@ -96,5 +96,11 @@ class EventController extends Controller
     {
         $event->delete();
         return redirect('/eventlist');
+    }
+    public function closestEvents()
+    {
+        $date = date('d-m-y');
+        $events = Event::whereRaw('date_event > CURDATE()')->orderBy('date_event', 'asc')->take(5)->get();
+        return view('startMainPage', compact('events'));
     }
 }
