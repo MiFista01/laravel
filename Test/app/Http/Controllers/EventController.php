@@ -53,7 +53,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        
+        return view('Events.detaile',compact('event'));
     }
 
     /**
@@ -102,5 +102,16 @@ class EventController extends Controller
         $date = date('d-m-y');
         $events = Event::whereRaw('date_event > CURDATE()')->orderBy('date_event', 'asc')->take(5)->get();
         return view('startMainPage', compact('events'));
+    }
+    public function search(Request $request)
+    {
+        $AAAAAAAAAAAA = $request->input('search');
+        
+        $events = Event::where('title', 'LIKE', "%".$AAAAAAAAAAAA."%")
+        ->orWhere('description', 'LIKE', "%".$AAAAAAAAAAAA."%")
+        ->orWhere('date_event', 'LIKE', "%".$AAAAAAAAAAAA."%")
+        ->orderBy('date_event', 'asc')
+        ->get();
+        return view('search', compact('events'));
     }
 }

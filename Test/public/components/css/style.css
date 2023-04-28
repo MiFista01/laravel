@@ -9,3 +9,26 @@ main{
     flex-grow: 1;
     width: 90%;
 }
+.card{
+    margin: 0px 2%;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.card-body{
+    flex: none !important;
+}
+.img{
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+.img img{
+    width: 100%;
+}
+.show img{
+    width: auto !important;
+}
+.card-text span{
+    font-weight: 700;
+}
