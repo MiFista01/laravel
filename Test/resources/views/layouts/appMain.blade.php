@@ -23,11 +23,11 @@
             <a class="navbar-brand" href="/"><img src="../components/images/LogoIrbis.png" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mr-auto">
-                <li>
+                {{-- <li>
                   <a class="navbar-brand" href="#">ProjectsEvent</a>
-                </li>
+                </li> --}}
                 <li>
-                  <a class="navbar-brand" href="#">Events</a>
+                  <a class="navbar-brand" href="/events">All events</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0" method="POST" action="/search">

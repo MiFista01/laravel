@@ -1,6 +1,7 @@
 @extends('layouts.appMain')
 @section('content')
-<div class="show">
+<div class="row">
+  <div class="show">
     <div class="card" style="width: 60%; margin: auto">
         <div class="row">
             <div class="col-md-5 showImg">
@@ -17,11 +18,23 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-around" style="width: 30%; margin: auto; margin-top: 20px">
-        <a href="/events">EventsList</a>
-        <a href="/">Home</a>
-        <a href="/regevent/{{ $event['id'] }}">Registration of event</a>
-    </div>
-</div>
+  </div>
 
+  <div class="bd-example">
+    <form class="">
+      
+      <div class="mb-3">
+        <label for="validationTooltip01">Email</label>
+        <div class="input-group">
+          <input type="text" class="form-control" aria-describedby="validatedInputGroupPrepend" required>
+          <div class="input-group-append">
+            <label class="input-group-text" for="validatedInputGroupSelect">@</label>
+          </div>
+        </div>
+        
+      </div>
+    
+    </form>
+  </div>
+</div>
 @endsection

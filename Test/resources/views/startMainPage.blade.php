@@ -1,7 +1,7 @@
 @extends('layouts.appMain')
 @section('content')
 <h1>Welcome Evens Portal</h1>
-<h2>Closest events</h2>
+<h3>Closest events</h3>
 <div class="row row-cols-1 row-cols-md-5 g-5 card-group">
   @foreach ($events as $item)
   <div class="card">

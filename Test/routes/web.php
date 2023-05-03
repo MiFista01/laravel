@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [EventController::class, 'closestEvents']);
 Route::get('/show/{event}', [EventController::class, 'show']);
+Route::get('/events', [EventController::class, 'allEvents']);
+Route::get('/regevent/{event}', [EventController::class, 'reg']);
 Route::post('/search', [EventController::class, 'search'])->name('search');
 
 

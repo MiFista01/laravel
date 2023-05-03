@@ -105,13 +105,24 @@ class EventController extends Controller
     }
     public function search(Request $request)
     {
-        $AAAAAAAAAAAA = $request->input('search');
+        $search = $request->input('search');
         
-        $events = Event::where('title', 'LIKE', "%".$AAAAAAAAAAAA."%")
-        ->orWhere('description', 'LIKE', "%".$AAAAAAAAAAAA."%")
-        ->orWhere('date_event', 'LIKE', "%".$AAAAAAAAAAAA."%")
+        $events = Event::where('title', 'LIKE', "%".$search."%")
+        ->orWhere('description', 'LIKE', "%".$search."%")
+        ->orWhere('date_event', 'LIKE', "%".$search."%")
         ->orderBy('date_event', 'asc')
         ->get();
         return view('search', compact('events'));
+    }
+    public function allEvents(Request $request)
+    {
+        $search = $request->input('search');
+        
+        $events = Event::whereRaw('date_event > CURDATE()')->orderBy('date_event', 'asc')->get();
+        return view('search', compact('events'));
+    }
+    public function reg(Event $event)
+    {
+        return view('Events.regEvent', compact('event'));
     }
 }

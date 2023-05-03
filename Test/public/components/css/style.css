@@ -14,21 +14,52 @@ main{
     display: flex;
     flex-direction: column !important;
     justify-content: space-between !important;
+    
 }
-.card-body{
+.row .card-body{
     flex: none !important;
 }
-.img{
+.row .img{
     overflow: hidden;
     background-position: center;
     background-size: cover;
 }
-.img img{
+.row .card-img-top{
+    height: 70%;
+    width: auto;
+}
+.show .row {
+    flex-wrap: nowrap !important;
+}
+.show .card{
+    width: 90% !important;
+}
+.show .card-text span{
+    font-weight: 600;
+    font-size: 2vmin;
+}
+.show p{
+    font-size: 2vmin;
+}
+.show .showImg{
+    position: sticky;
+    left: 0;
+}
+.show .showImg img{
     width: 100%;
 }
-.show img{
-    width: auto !important;
+.search .card{
+    width: 15% !important;
 }
-.card-text span{
-    font-weight: 700;
+.row .show {
+    width: 60%;
+}
+.bd-example{
+    width: 20%;
+}
+.bd-example label{
+    margin-bottom: 0px !important;
+}
+.bd-example .input-group{
+    align-items: center;
 }
